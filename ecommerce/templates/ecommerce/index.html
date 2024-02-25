@@ -1,0 +1,33 @@
+{% extends "ecommerce/layouts/main.html" %}
+{% block title %}
+ShopKart - Online shopping
+{% endblock title %}
+{% block content %}
+{% include "ecommerce/inc/slider.html" %}
+<div class="container" style="margin-top: 70px;">
+   <div class="row">
+       <div class="col-12">
+           <h3 class="mb-3 ">Latest Offers</h3>
+           <hr style="border-color : #b8bfc2"></hr>
+       </div>
+        {% for item in products %}
+                    <div class="col-md-4 col-lg-2">
+                        <div class="card my-3" style="height: 90%;">
+                            <img src="{{ item.image.url }}" alt="{{ item.name }}" class="card-img-top img-fluid" style="height: 100%;">
+                            <hr style="border-color:#000000; margin:0;">
+                            <a href="{% url "product_details" item.catagory.name item.name %}">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title text-primary">{{ item.name }}</h5>
+                                    <p class="card-text d-flex justify-content-between">
+                                        <span class="oldprice float-start"><s>Rs.{{ item.original_price}}</s></span>
+                                        <span class="newprice float-end">Rs.{{ item.selling_price }}</span>
+                                    </p>                            
+                                </div>
+                           </a>
+                        </div>
+                    </div>
+            {% endfor %}
+        
+</div>
+</div>
+{% endblock content %}

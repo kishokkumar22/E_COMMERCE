@@ -1,0 +1,44 @@
+{% extends "ecommerce/layouts/main.html" %}
+{% block title %}
+ShopKart - Collections
+{% endblock title %}
+{% block content %}
+<div class="container" style = "margin-top:10px" >
+    <div class="px-4 py-5 my-5 text-center">
+        <h1 class="display-5 fw-bold">Centered hero</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, 
+            the world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
+             responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+             <a href="#" class="btn btn-primary btn-lg px-4 gap-3">Primary button</a>
+             <a href="#" class="btn btn-outline-secondary btn-lg px-4">Secondary</a>
+          </div>
+        </div>
+    </div>
+</div>
+
+<section class = "bg-light py-4 my-5">
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-12">
+                <h4 class = "mb-3">Categories</h4>
+                <hr style="border-color : #b8bc2;">
+            </div>
+          {% for item in catagory %}
+            <div class = "col-md-4 col-lg-2 ">
+                <div class = "card my-3" style="height:90%">
+                    <img src="{{item.image.url}}" alt="Categories" class="card-image-top img-fluid " style="height:100%" >
+                    <a href ="{% url "collections" item.name %}">
+                       <div class="card-body d-flex flex-column">
+                          <h5 class="card-title text-primary">{{item.name}}</h5>
+                          <p class ="card-text">{{item.description}}</p>
+                       </div>
+                   </a>
+                </div>
+            </div>
+           {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
