@@ -1,0 +1,150 @@
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    object-position: top;
+    position: relative;
+    top: 50px;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.card:hover {
+    border: 1px solid #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    /* Add smooth transition */
+}
+
+.oldprice {
+    color: red;
+    font-weight: bold;
+}
+
+.newprice {
+    background-color: green;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    font-size: small;
+    margin-left: 50px;
+}
+
+.pic-box
+{
+ position:relative;   
+}
+.hotdeal
+{
+    background: orangered;
+    color: white;
+    font-weight: bold;
+    display: inline;
+    width: 75px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    top: 1px;
+    right: 11px;
+    position: absolute;
+    z-index: 1;
+}
+
+.mb-4
+{
+    font-size: medium;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.footer {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 5.5 rem;
+    background: #1a242f;
+    height: 500px;
+    position: static;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-left: 200px;
+}
+
+.footer-content p {
+    color: #d6d6d6;
+}
+
+.footer-content h3 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+}
+
+.footer-content h3,
+p {
+    padding-right: 70px;
+}
+
+.footer-content h4 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+}
+
+.footer-content li {
+    margin: bottom 10px;
+}
+
+.icons a {
+    display: inline-block;
+    margin-right: 17px;
+    transition: all.40s ease;
+    padding-bottom: 20px;
+}
+
+.icons a:hover {
+    transform: translateY(-3px) translateY(-5px);
+    cursor: pointer;
+}
+
+.footer-content li {
+    margin-top: 16px;
+    display: block;
+    color: #d6d6d6;
+    font-weight: 400;
+    font-size: 15px;
+    transition: all.40s ease;
+}
+
+.footer-content li:hover {
+    color: #9b0a0a;
+    transform: translateY(-3px) translateY(-5px);
+    cursor: pointer;
+}
+
+.footer-content p:hover {
+    color: #b51919;
+    transform: translateY(-3px) translateY(-5px);
+    cursor: pointer;
+}
+
+.copyright {
+    color: rgb(203, 18, 18);
+    text-align: center;
+    padding: 10px;
+    width: 700px;
+    padding-left: 150%;
+}
+
